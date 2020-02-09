@@ -1,0 +1,13 @@
+{%  if links is defined and links is not empty and links is iterable and links|length > 1 %}
+    <nav aria-label="{{'Switch language'|t}}" aria-role="navigation" class="language-switcher">
+        <ul class="language-switcher__list">
+            {% for switcherLink in links %}
+                <li class="language-switcher__single {{switcherLink.current ? 'is-active'}}">
+                    <a href="{{switcherLink.url}}?{{ craft.app.getModule('locale-redirect').getSettings().disableRedirectParam }}=true" hreflang="{{switcherLink.language}}" lang="{{switcherLink.language}}" class="language-switcher__link">
+                        {{ switcherLink.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{%  endif %}

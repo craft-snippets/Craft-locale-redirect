@@ -1,0 +1,44 @@
+{
+    "name": "craftsnippets/locale-redirect",
+    "description": "Locale redirect",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "locale redirect"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Piotr Pogorzelski",
+            "homepage": "http://craftsnippets.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "jaybizzle/crawler-detect" :"^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+          "craftsnippets\\localeredirect\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Locale redirect",
+        "handle": "locale-redirect",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "components": {
+            "localeRedirectService": "craftsnippets\\localeredirect\\services\\LocaleRedirectService"
+        },
+        "class": "craftsnippets\\localeredirect\\LocaleRedirect"
+    }
+}
