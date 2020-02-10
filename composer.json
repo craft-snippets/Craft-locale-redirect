@@ -2,7 +2,7 @@
     "name": "craftsnippets/locale-redirect",
     "description": "Locale redirect",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
@@ -11,8 +11,8 @@
         "locale redirect"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/craft-snippets/Craft-locale-redirect/blob/master/README.md",
+        "issues": "https://github.com/craft-snippets/Craft-locale-redirect/issues"
     },
     "license": "MIT",
     "authors": [
