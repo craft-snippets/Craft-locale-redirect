@@ -111,9 +111,9 @@ class LocaleRedirectService extends Component
             return false;
         }
 
-        $sitesMapping = LocaleRedirect::$plugin->getSettings()->sitesMapping;
-        if(!is_array($sitesMapping) || empty($sitesMapping)){
-            Craft::info('Redirect stopped - "sitesMapping" setting not defined or incorrect', LocaleRedirect::$plugin->name);
+        $redirectMapping = LocaleRedirect::$plugin->getSettings()->redirectMapping;
+        if(!is_array($redirectMapping) || empty($redirectMapping)){
+            Craft::info('Redirect stopped - "redirectMapping" setting not defined or incorrect', LocaleRedirect::$plugin->name);
             $allowed = false;
         }
 
@@ -139,11 +139,11 @@ class LocaleRedirectService extends Component
      */
 
     public function getTargetSite(){
-        $sitesMapping = LocaleRedirect::$plugin->getSettings()->sitesMapping;
-        $mappedLanguages = array_keys($sitesMapping);
+        $redirectMapping = LocaleRedirect::$plugin->getSettings()->redirectMapping;
+        $mappedLanguages = array_keys($redirectMapping);
         $preferredLanguage = Craft::$app->getRequest()->getPreferredLanguage($mappedLanguages);
         Craft::info('Preferred language is '.$preferredLanguage, LocaleRedirect::$plugin->name);
-        $handle = $sitesMapping[$preferredLanguage];
+        $handle = $redirectMapping[$preferredLanguage];
 
         $targetSite = null;
 

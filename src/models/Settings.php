@@ -22,7 +22,7 @@ class Settings extends Model
 {
 
     public $enableRedirect = true;
-    public $sitesMapping = array();
+    public $redirectMapping = array();
     public $redirectToBaseUrlIfNoElement = false;
     public $disableRedirectParam = 'change-language';
     public $ignoreCrawlers = true;
